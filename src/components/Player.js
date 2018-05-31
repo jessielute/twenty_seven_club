@@ -16,12 +16,20 @@ class Player extends React.Component {
     }
     //play song function
 
-    PlaySong =()=> {
+    PlaySong =(index)=> {
+        if (index) {
+            this.setState({currentSong: index, playing: true}, () => {
+                  // I'm a callback!
+                 //this.whatever.whatever.play()
+                 //i dont work properly yet
+           })
+        } else {
         this.setState({
             playing: true,
         });
         this.AudioPlayer.current.play();
-    }
+}
+}
 
 
     //pause song function
@@ -45,11 +53,17 @@ class Player extends React.Component {
 
     //skip function
     SkipSong = () => {
-        let nextSong = (this.state.currentSong) + 1;
+        let nextSong;
+        if (this.state.currentSong === this.props.songs.length -1) {
+            nextSong = 0;
+        } else {
+            nextSong = (this.state.currentSong) +1
+        }
         this.setState({ currentSong: nextSong })
     };
 
 //title of playing song DOES NOT YET WORK. 
+//the player lives here
     render() {
 
         return (
@@ -70,8 +84,8 @@ class Player extends React.Component {
                 <button name="play" id="play" onClick={this.PlaySong}><img src={`${process.env.PUBLIC_URL}/icons/playicon.svg`} /></button>
                 <button name="pause" id="pause" onClick={this.PauseSong}><img src={`${process.env.PUBLIC_URL}/icons/pauseicon.svg`} /></button>
                 <button name="forward" id="forward" onClick={this.SkipSong}><img src={`${process.env.PUBLIC_URL}/icons/skipicon.svg`} /></button>
-
-
+                <Route path='/:songId'render={(props)=><SongDetails {...props}songs={this.props.songs} PlaySong={this.PlaySong} />}/>
+                <Route exact path="/" render={(props)=><SongsList {...props} PlaySong={this.PlaySong} songs={this.props.songs} />}/>
             </div>
         );
     }

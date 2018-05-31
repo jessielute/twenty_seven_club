@@ -6,7 +6,7 @@ import App from './App';
 import './index.css';
 import SongsList from './components/SongsList';
 
-function Song(source, title, description, id, deadStar, bio) {
+function Song(source, title, description, id, deadStar, bio, pic) {
   this.source = source;
   this.title = title;
   this.description = description;
@@ -28,7 +28,8 @@ const songs = [{
   title: 'All Along the Watchtower',
   id: 1,
   artist: "Jimi Hendrix",
-  deadStar: "Jimi Hendrix"
+  deadStar: "Jimi Hendrix",
+  bio: "he also died."
 },
 {
   file: 'Morrison.mp3',
@@ -68,7 +69,6 @@ const songs = [{
 ReactDOM.render((
   <Router>
     <Switch>
-      <Route path="/songslist" component={SongsList} />
       <App songs={songs} />
     </Switch>
   </Router>
