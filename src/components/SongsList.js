@@ -9,14 +9,17 @@ class SongsList extends Component {
         const { match } = this.props;
         const allTitlesArray = this.props.songs.map((song, index) => {
             return ( 
+               
             <li key={index}>
                 <Link
                     to={`/${index}`}>
+                    <button className= "play-button-2"onClick={() => this.props.PlaySong(index)}><img src={`${process.env.PUBLIC_URL}/icons/play-circle-outline.png`} /></button>
                     <p>{song.title}</p>
-                    <button onClick={() => this.props.PlaySong(index)}>Play</button>
+                    
                     {song.artist}
                 </Link>
         </li> )
+  
         })
 
         return (
@@ -34,7 +37,7 @@ class SongsList extends Component {
         
             <div className="SongsList-container">
                 <h1> Listen </h1>
-                <div>
+                <div className= "box-o-songs">
                     <ul>
                         {allTitlesArray}
                     </ul>

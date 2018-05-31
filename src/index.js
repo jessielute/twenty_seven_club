@@ -29,7 +29,7 @@ const songs = [{
   id: 1,
   artist: "Jimi Hendrix",
   deadStar: "Jimi Hendrix",
-  bio: "he also died."
+  bio: "Although the details of Hendrix's last day and death are widely disputed, he spent much of September 17, 1970, in London with Monika Dannemann, the only witness to his final hours. Dannemann said that she prepared a meal for them at her apartment in the Samarkand Hotel, 22 Lansdowne Crescent, Notting Hill, sometime around 11 p.m., when they shared a bottle of wine. She drove Hendrix to the residence of an acquaintance at approximately 1:45 a.m., where he remained for about an hour before she picked him up and drove them back to her flat at 3 a.m. Dannemann said they talked until around 7 a.m., when they went to sleep. She awoke around 11 a.m., and found Hendrix breathing, but unconscious and unresponsive. She called for an ambulance at 11:18 a.m., which arrived on the scene at 11:27 a.m. Paramedics then transported Hendrix to St Mary Abbot's Hospital where Dr. John Bannister pronounced him dead at 12:45 p.m. on September 18, 1970."
 },
 {
   file: 'Morrison.mp3',

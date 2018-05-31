@@ -16,20 +16,12 @@ class Player extends React.Component {
     }
     //play song function
 
-    PlaySong =(index)=> {
-        if (index) {
-            this.setState({currentSong: index, playing: true}, () => {
-                  // I'm a callback!
-                 //this.whatever.whatever.play()
-                 //i dont work properly yet
-           })
-        } else {
+    PlaySong =()=> {
         this.setState({
             playing: true,
         });
         this.AudioPlayer.current.play();
-}
-}
+    }
 
 
     //pause song function
