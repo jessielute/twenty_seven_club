@@ -11,7 +11,7 @@ class SongDetails extends Component {
             <div>
                 <Link to="/">
                     <button className="play-button-2">
-                        <img src={`${process.env.PUBLIC_URL}/icons/home.png`} />
+                        <img src={`${process.env.PUBLIC_URL}./icons/home.png`} />
                     </button>
                 </Link>
                 <h2>{this.props.songs[songId].deadStar}</h2>

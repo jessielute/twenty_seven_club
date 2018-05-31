@@ -48,7 +48,6 @@ margin: 1vw;
   display: flex;
   flex-direction: row;
  background-color: rgb(207, 37, 37);
- opacity: 0.9;
 }
 
 li {
